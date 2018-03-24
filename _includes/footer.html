@@ -1,6 +1,6 @@
 <footer>
 		<p><small class="sizes"></small><p>	
-	<p>Our Local is a Punch concept. We hope you love it. Build in Burton 2018 <br />
-	<small>Updated: {{ site.time }} | {% if page.title == 'Style Guide'%} Style Guide Built by: {{ page.author }} {% endif %} </small></p>
+	<p>Our Local is a Punch concept. Build in Burton 2018. We hope you love it<br />
+	<small>Updated: {{ site.time | date_to_long_string }} {% if page.title == 'Style Guide'%}| Style Guide Built by: {{ page.author }} {% endif %}</small></p>
 </footer>
 
