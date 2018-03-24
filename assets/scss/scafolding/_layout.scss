@@ -1,0 +1,152 @@
+//test breakpoint scss
+html{	
+	box-sizing: border-box;
+	word-break: normal;
+	transition: all .5s;
+	font-size:100%; 
+	
+	@include breakpoint(break1) {font-size:1.1em;}
+	@include breakpoint(break2) {font-size:1.2em;}
+	@include breakpoint(break3) {font-size:1.2em;}
+	@include breakpoint(break4) {font-size:1.3em;} //from 1.5 up to 2.4 new breakpoint
+	@include breakpoint(break5) {font-size:1.8em;} //from 1.5 up to 2.4 new breakpoint
+	@include breakpoint(break6) {font-size:1.5em;} //from 1.5 up to 2.4 new breakpoint
+	}
+
+body{ 
+	@include breakpoint(break1) {}
+	@include breakpoint(break2) {}
+	@include breakpoint(break3) {}
+	@include breakpoint(break4) {}	
+}
+
+.container {
+	width: 96%;
+	margin: 0 auto;
+	@include breakpoint(break1) {	width: 98%;}
+	@include breakpoint(break2) {	width: 90%;}
+	@include breakpoint(break3) {	width: 85%;}
+	@include breakpoint(break4) {	width: 90%; max-width:72.5rem;}	
+}
+
+
+
+
+
+	
+/////gridlines for dev
+.gridlines {
+	border: 1px solid #ff00d5;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background: #fff;
+	transition: all 1s;
+	@include breakpoint(break1) {background: #ffe8e8;}
+	@include breakpoint(break2) {background: #e4c6f8;}
+	@include breakpoint(break3) {background: #c6cef8;}
+	@include breakpoint(break4) {background: #c3ffd9;}
+	@include breakpoint(break5) {background: #cfff21;}
+	
+	}	
+
+	
+	
+//////////////////////////// grid testing  - not for production
+.outside {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap:1em;
+		grid-template-areas: 
+		"b"
+		"a"
+		"a"
+		"c"
+		"d";
+	
+	
+
+	@include breakpoint(break1) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap:1em;
+		grid-template-areas: 
+		"a a b"
+		"a a b"
+		"a a b"
+		"c c c"
+		"d d d";
+		}
+
+	@include breakpoint(break2) {}
+
+	@include breakpoint(break3) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap:2em;
+		grid-template-areas: 
+		"a a b"
+		"a a b"
+		"a a b"
+		"c c b"
+		"d d d"
+		"d d d"
+		"d d d";
+		}
+	
+	@include breakpoint(break4) {}
+	@include breakpoint(break5) {}			
+	
+}
+
+
+.a{
+	border: 1px solid #ddd;
+	grid-area: a;
+	background: rgba(255, 255, 255, 0.3);
+	}
+
+.b{
+	border: 1px solid #ddd;
+	grid-area: b;
+	display: flex;
+	background: rgba(255, 255, 255, 0.3);
+
+	
+		li { }	
+	}
+
+.c{
+	border: 1px solid #ddd;
+	grid-area: c;
+	background: rgba(255, 255, 255, 0.3);
+	}
+	
+.d{
+	border: 1px solid #ddd;
+	grid-area: d; 
+	background: rgba(255, 255, 255, 0.3);
+	}	
+	
+// testing breakpoint sizes
+
+
+	.sizes:before {content: "Breakpoint: 0";
+		color: #222; border: 1px solid #111;border-radius: 5px; padding: 10px;margin: 1em;
+		
+	@include breakpoint(break1) {background: #ffe8e8; content: "Breakpoint: 1"}
+	@include breakpoint(break2) {background: #e4c6f8; content: "Breakpoint: 2"}
+	@include breakpoint(break3) {background: #c6cef8; content: "Breakpoint: 3"}
+	@include breakpoint(break4) {background: #c3ffd9; content: "Breakpoint: 4"}
+	@include breakpoint(break5) {background: #cfff21; content: "Breakpoint: 5"}			
+	}
+	
+
+
+
+	
+	
+
+
+
+		
+
