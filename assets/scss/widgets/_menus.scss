@@ -1,0 +1,55 @@
+.menusection{
+	margin: 0 auto 3em;
+	background-image: url(../../assets/img/menutexture.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: hidden;
+	display: block;
+	text-align: center;
+	padding-bottom: 2rem;
+	
+	.menuitems {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include breakpoint(break1) {grid-template-columns: 1fr 1fr; grid-gap:2em; text-align: left;}
+	@include breakpoint(break2) {grid-template-columns: 1fr 1fr; grid-gap:2em;}
+	@include breakpoint(break3) {grid-template-columns: 1fr 1fr 1fr; grid-gap:1.4em;}
+	@include breakpoint(break4) {grid-template-columns: 1fr 1fr 1fr; grid-gap:3em;}
+	@include breakpoint(break5) {}				
+	}
+	
+	h2 {
+		font-family: $body-font;
+		text-transform: uppercase;
+		font-size: 1rem
+		
+	}
+	
+	h3 {
+		font-family: $body-font;
+		text-transform: uppercase;
+		font-size: .8rem;
+		font-weight: 600;
+		margin: 0;
+		line-height: 1rem;
+		padding-bottom: .3em;
+	}	
+	
+	p {
+		font-family: $utility-font;
+		font-size: .7rem;
+		font-weight: 100;
+
+		
+		
+		.price {
+			font-family: $body-font;
+			text-transform: uppercase;
+			font-weight: 600;
+			display: block;
+			padding-top: .325em;
+		}
+	}
+	
+	
+	}
