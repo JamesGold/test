@@ -1,0 +1,135 @@
+//$break-1: 28.125em; /* 450px / 16px = 28.125em */
+//$break-2: 35em; /* 560px / 16px = 35em */
+//$break-3: 48em; /* 768px / 16px = 48em */
+//$break-4: 56em; /* 896px  / 16px = 56em */
+//$break-5: 76.5em; /* 1224px / 16px = 76.5em */
+
+
+.hero {
+	background: url(/assets/img/MeatPlatter.jpg) no-repeat ;
+	background-size:cover;
+	background-attachment: fixed;
+	width:100%;
+	padding: 0;
+	//height:12rem;
+	transition: all .5s;
+	z-index: 0;
+	text-align: center ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top:0rem;
+	@include breakpoint(break1) {height:18rem;}
+	@include breakpoint(break2) {height:24rem;}
+	@include breakpoint(break3) {height:26rem;}
+	@include breakpoint(break4) {height:32rem;}
+	
+	.headergroup { // just here to group h1 & h2 so that these can be vertically aligned with flexbox 
+		}
+		
+	
+	h1 {
+		font-size: 4rem;
+		margin: 0 0 5%;
+		padding: 0 0 1.8rem;
+		color: rgba(255, 255, 255, 0.8);
+		display: inline-block;
+	@include breakpoint(break1) {font-size: 5rem; }
+	@include breakpoint(break2) {font-size: 7rem; padding: 0 0 3rem;}			
+	@include breakpoint(break3) {font-size: 9rem; padding: 0 0 4rem;}
+	@include breakpoint(break4) {font-size: 12rem; padding: 0 0 6rem;}
+	
+// 	Breakpoint Test Block - changes heading colour at breakpoints
+/*
+	@include breakpoint(break1) {color: rgba(0, 103, 255, 0.9)}
+	@include breakpoint(break2) {color: rgba(0, 128, 0, 0.81);}			
+	@include breakpoint(break3) {color: rgba(255, 0, 0, 0.83);}
+	@include breakpoint(break4) {color: rgba(128, 0, 128, 0.84);}	
+	
+*/	
+	}
+		
+	h2 {
+		background: rgba(0, 0, 0, 0.6);
+		margin: 0; 
+		font-size: .8rem;
+		padding: .6rem;
+		text-shadow: none;
+		border-radius: .025rem;
+		display: inline-block;
+		color: #fff;
+		@include breakpoint(break1) {font-size: 1rem;}
+		@include breakpoint(break2) {font-size: 1.4rem;}
+		@include breakpoint(break3) {font-size: 1.6rem;}
+		@include breakpoint(break4) {font-size: 2rem;}
+	}
+}
+
+.subhero {
+	background: url(/assets/img/ROAST_BEEF.jpg)  no-repeat ;
+	background-size:cover;
+	background-attachment: fixed;
+	width:100%;
+	padding: 0;
+	height:8rem;
+	transition: all .5s;
+	z-index: 0;
+	text-align: center ;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include breakpoint(break1) {height:12rem;}
+	@include breakpoint(break2) {height:15rem;}
+	@include breakpoint(break3) {height:17rem;}
+	@include breakpoint(break4) {height:19rem;}
+	
+	.headergroup { // just here to group h1 & h2 so that these can be vertically aligned with flexbox 
+		}
+		
+	
+	h1 {
+		font-size: 4rem;
+		margin: 0 0 5%;
+		padding: 1rem;
+		color: rgba(255, 255, 255, 0.8);
+		display: inline-block;
+	@include breakpoint(break1) {font-size: 5rem; padding: 0 0 2rem;}
+	@include breakpoint(break2) {font-size: 6rem; padding: 1rem 0 2rem;}			
+	@include breakpoint(break3) {font-size: 7rem; padding: 3rem 0 2rem;}
+	@include breakpoint(break4) {font-size: 9rem; padding: 4rem 0 3rem;}	
+	
+// 	Breakpoint Test Block - changes heading colour at breakpoints
+/*
+	@include breakpoint(break1) {color: rgba(0, 103, 255, 0.9)}
+	@include breakpoint(break2) {color: rgba(0, 128, 0, 0.81);}			
+	@include breakpoint(break3) {color: rgba(255, 0, 0, 0.83);}
+	@include breakpoint(break4) {color: rgba(128, 0, 128, 0.84);}	
+	
+*/	
+		}
+		
+	h2 {
+		background: rgba(0, 0, 0, 0.6);
+		margin: 0; 
+		font-size: .8rem;
+		padding: .6rem;
+		text-shadow: none;
+		border-radius: .025rem;
+		display: inline-block;
+		color: #fff;
+		@include breakpoint(break1) {font-size: 1rem;}
+		@include breakpoint(break2) {font-size: 1.1rem;}
+		@include breakpoint(break3) {font-size: 1.2rem;}
+		@include breakpoint(break4) {font-size: 1.4rem;}
+	}
+}
+
+
+
+
+
+
+
+
+
+
