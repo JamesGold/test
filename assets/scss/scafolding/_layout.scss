@@ -15,19 +15,18 @@ html{
 	box-sizing: border-box;
 	word-break: normal;
 	transition: all .5s;
-	font-size:16px;
-	background: #bbb;
+	font-size:100%;
 	transition: all .8s;
 
 	}
 
 body{ 
-
+	font-size:16px;
 	@include breakpoint(break1) {font-size:1.1rem;}
 	@include breakpoint(break2) {font-size:1.2rem;}
-	@include breakpoint(break3) {font-size:1.2rem;}
+	@include breakpoint(break3) {font-size:1.25rem;}
 	@include breakpoint(break4) {font-size:1.3rem;} 
-	@include breakpoint(break5) {font-size:1.8rem;} 
+	@include breakpoint(break5) {font-size:1.4rem;} 
 }
 
 .container {
@@ -46,11 +45,12 @@ body{
 	border: 1px solid #ff00d5;
 	margin-top: 1em;
 	background: #fff;
-	@include breakpoint(break1) {background: #ffe8e8;}
-	@include breakpoint(break2) {background: #e4c6f8;}
-	@include breakpoint(break3) {background: #c6cef8;}
-	@include breakpoint(break4) {background: #c3ffd9;}
-	@include breakpoint(break5) {background: #cfff21;}
+
+	@include breakpoint(break1) {border-color: #ffe8e8;}
+	@include breakpoint(break2) {border-color: #e4c6f8;}
+	@include breakpoint(break3) {border-color: #c6cef8;}
+	@include breakpoint(break4) {border-color: #c3ffd9;}
+	@include breakpoint(break5) {border-color: #cfff21;}
 	
 	}	
 
@@ -58,9 +58,6 @@ body{
 	
 //////////////////////////// grid testing  - not for production
 .container {
-			
-
-	@include breakpoint(break1) {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap:1em;
@@ -69,15 +66,20 @@ body{
 		"a"
 		"a"
 		"c"
-		"d";	}
+		"d";			
+
+	@include breakpoint(break1) {
+
+		}
 
 	@include breakpoint(break2) {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		grid-gap:.3em;
 		grid-template-areas: 
-		"a a b"
-		"c c c"
-		"d d d";
+		"b b"
+		"a a"
+		"c c"
+		"d d";
 		}
 
 	@include breakpoint(break3) {
@@ -89,7 +91,6 @@ body{
 		"a a b"  
 		"c c c"
 		"d d d";
-
 		}
 	
 	@include breakpoint(break4) {}

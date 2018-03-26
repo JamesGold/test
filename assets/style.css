@@ -612,12 +612,12 @@ html {
   word-break: normal;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-size: 16px;
-  background: #bbb;
+  font-size: 100%;
   -webkit-transition: all .8s;
   transition: all .8s; }
 
 body {
+  font-size: 16px;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
@@ -631,13 +631,13 @@ body {
       font-size: 1.2rem; } }
   @media only screen and (min-width: 48em) {
     body {
-      font-size: 1.2rem; } }
+      font-size: 1.25rem; } }
   @media only screen and (min-width: 56em) {
     body {
       font-size: 1.3rem; } }
   @media only screen and (min-width: 76.5em) {
     body {
-      font-size: 1.8rem; } }
+      font-size: 1.4rem; } }
 
 .container {
   max-width: 96%;
@@ -674,40 +674,38 @@ body {
   /* 1224px / 16px = 76.5em */ }
   @media only screen and (min-width: 28.125em) {
     .gridlines {
-      background: #ffe8e8; } }
+      border-color: #ffe8e8; } }
   @media only screen and (min-width: 35em) {
     .gridlines {
-      background: #e4c6f8; } }
+      border-color: #e4c6f8; } }
   @media only screen and (min-width: 48em) {
     .gridlines {
-      background: #c6cef8; } }
+      border-color: #c6cef8; } }
   @media only screen and (min-width: 56em) {
     .gridlines {
-      background: #c3ffd9; } }
+      border-color: #c3ffd9; } }
   @media only screen and (min-width: 76.5em) {
     .gridlines {
-      background: #cfff21; } }
+      border-color: #cfff21; } }
 
 .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
+      grid-template-areas: "b" "a" "a" "c" "d";
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
   /* 896px  / 16px = 56em */
   /* 1224px / 16px = 76.5em */ }
-  @media only screen and (min-width: 28.125em) {
-    .container {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 1fr;
-          grid-template-columns: 1fr;
-      grid-gap: 1em;
-          grid-template-areas: "b" "a" "a" "c" "d"; } }
   @media only screen and (min-width: 35em) {
     .container {
-      -ms-grid-columns: 1fr 1fr 1fr;
-          grid-template-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
       grid-gap: .3em;
-          grid-template-areas: "a a b" "c c c" "d d d"; } }
+          grid-template-areas: "b b" "a a" "c c" "d d"; } }
   @media only screen and (min-width: 48em) {
     .container {
       -ms-grid-columns: 1fr 1fr 1fr;
@@ -717,21 +715,30 @@ body {
 
 .a {
   border: 1px solid #ddd;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: a;
   background: rgba(255, 255, 255, 0.3); }
 
 .b {
   border: 1px solid #ddd;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: b;
   background: rgba(255, 255, 255, 0.3); }
 
 .c {
   border: 1px solid #ddd;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: c;
   background: rgba(255, 255, 255, 0.3); }
 
 .d {
   border: 1px solid #ddd;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
   grid-area: d;
   background: rgba(255, 255, 255, 0.3); }
 
@@ -833,7 +840,7 @@ body {
     opacity: 1; } }
 
 nav {
-  margin: 30px auto;
+  margin: 0px auto;
   width: 100%;
   padding: 0;
   background: rgba(0, 0, 0, 0.5);
@@ -867,7 +874,7 @@ nav {
           color: #fcff9b;
           text-decoration: underline; }
 
-.subnavi {
+.subnav {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1105,33 +1112,54 @@ table {
   background-size: cover;
   overflow: hidden;
   text-align: center;
-  padding-bottom: 2rem;
-  /*
-	.menuitems {
-	display: grid;
-	grid-template-columns: 1fr;
-	@include breakpoint(break1) {grid-template-columns: 1fr 1fr; grid-gap:2em; text-align: left;}
-	@include breakpoint(break2) {grid-template-columns: 1fr 1fr; grid-gap:2em;}
-	@include breakpoint(break3) {grid-template-columns: 1fr 1fr 1fr; grid-gap:1.4em;}
-	@include breakpoint(break4) {grid-template-columns: 1fr 1fr 1fr; grid-gap:3em;}
-	@include breakpoint(break5) {}				
-	}
-*/ }
+  padding: 1rem;
+  padding-bottom: 2rem; }
+  .menusection .menuitems {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    /* 450px / 16px = 28.125em */
+    /* 560px / 16px = 35em */
+    /* 768px / 16px = 48em */
+    /* 896px  / 16px = 56em */
+    /* 1224px / 16px = 76.5em */ }
+    @media only screen and (min-width: 28.125em) {
+      .menusection .menuitems {
+        -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        text-align: left; } }
+    @media only screen and (min-width: 35em) {
+      .menusection .menuitems {
+        -ms-grid-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+        grid-gap: 2em; } }
+    @media only screen and (min-width: 48em) {
+      .menusection .menuitems {
+        -ms-grid-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1.4em; } }
+    @media only screen and (min-width: 56em) {
+      .menusection .menuitems {
+        -ms-grid-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 3em; } }
   .menusection h2 {
     font-family: "Rokkitt", serif;
     text-transform: uppercase;
-    font-size: 1rem; }
+    font-size: 1.6rem; }
   .menusection h3 {
     font-family: "Rokkitt", serif;
     text-transform: uppercase;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 0;
-    line-height: 1rem;
+    line-height: 1.4rem;
     padding-bottom: .3em; }
   .menusection p {
     font-family: "PT Sans", sans-serif;
-    font-size: .7rem;
+    font-size: .8rem;
     font-weight: 100; }
     .menusection p .price {
       font-family: "Rokkitt", serif;
@@ -1144,6 +1172,7 @@ table {
   border: 0.325rem dotted rgba(255, 255, 255, 0.33);
   text-align: center;
   font-weight: 400;
+  font-size: 1rem;
   padding: 2em;
   background: rgba(255, 255, 255, 0.8); }
   .card h3 {
@@ -1154,7 +1183,7 @@ table {
     margin: 0;
     padding: 0;
     font-weight: 400;
-    padding: 0 2rem; }
+    padding: 0 1rem; }
   .card.withpic {
     padding: 0 0 1em;
     background: rgba(255, 255, 255, 0.5); }
