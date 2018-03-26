@@ -694,7 +694,7 @@ body {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 1em;
-      grid-template-areas: "b" "a" "a" "c" "d";
+      grid-template-areas: "b" "a" "a" "c" "d" "e";
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
@@ -705,13 +705,13 @@ body {
       -ms-grid-columns: 1fr 1fr;
           grid-template-columns: 1fr 1fr;
       grid-gap: .3em;
-          grid-template-areas: "b b" "a a" "c c" "d d"; } }
+          grid-template-areas: "b b" "a a" "c c" "d d" "e e"; } }
   @media only screen and (min-width: 48em) {
     .container {
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
       grid-gap: .4em;
-          grid-template-areas: "a a b" "a a b" "a a b"   "c c c" "d d d"; } }
+          grid-template-areas: "a a b" "a a b" "a a b"   "c c c" "d d d" "e e e"; } }
 
 .a {
   border: 1px solid #ddd;
@@ -739,6 +739,11 @@ body {
   border: 1px solid #ddd;
   -ms-grid-row: 5;
   -ms-grid-column: 1;
+  grid-area: d;
+  background: rgba(255, 255, 255, 0.3); }
+
+.e {
+  border: 1px solid #ddd;
   grid-area: d;
   background: rgba(255, 255, 255, 0.3); }
 
@@ -1185,7 +1190,7 @@ table {
     font-weight: 400;
     padding: 0 1rem; }
   .card.withpic {
-    padding: 0 0 1em;
+    padding: 1em;
     background: rgba(255, 255, 255, 0.5); }
     .card.withpic img {
       width: 100%;
@@ -1198,35 +1203,26 @@ table {
     font-size: 1.2em; }
 
 .background {
-  background-attachment: fixed;
-  width: 100%;
-  padding: 3em 0;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  z-index: 0;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 0rem;
-  transition: all .5s;
+  padding: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 1em;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
   /* 896px  / 16px = 56em */ }
-  .background:before, .background:after {
-    content: "";
-    display: table; }
-  .background:after {
-    clear: both; }
-  .background {
-    zoom: 1; }
+  @media only screen and (min-width: 35em) {
+    .background {
+      -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+      grid-gap: .5em; } }
+  @media only screen and (min-width: 48em) {
+    .background {
+      -ms-grid-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em; } }
   .background.orange {
     background: url(../assets/img/GM_ORANGE.jpg) repeat;
     background-size: cover;

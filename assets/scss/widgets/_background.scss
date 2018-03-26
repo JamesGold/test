@@ -1,20 +1,12 @@
 .background {
-	@include clearfix;
-	background-attachment: fixed;
-	width:100%;
-	padding: 3em 0;
-	transition: all .5s;
-	z-index: 0;
-	text-align: center ;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top:0rem;
-	transition: all .5s;
+	padding: 1em;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap:1em;
 
 		@include breakpoint(break1) {}
-		@include breakpoint(break2) {}
-		@include breakpoint(break3) {}
+		@include breakpoint(break2) {grid-template-columns: 1fr 1fr; grid-gap:.5em;}
+		@include breakpoint(break3) {grid-template-columns: 1fr 1fr 1fr; grid-gap:1em;}
 		@include breakpoint(break4) {}
 	
 	&.orange{background: url(../assets/img/GM_ORANGE.jpg) repeat; background-size: cover; background-attachment: fixed;}	
