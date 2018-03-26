@@ -15,31 +15,29 @@ html{
 	box-sizing: border-box;
 	word-break: normal;
 	transition: all .5s;
-	font-size:1em;	
+	font-size:16px;
 	background: #bbb;
-	
-	@include breakpoint(break1) {font-size:1.1em;}
-	@include breakpoint(break2) {font-size:1.2em;}
-	@include breakpoint(break3) {font-size:1.2em;}
-	@include breakpoint(break4) {font-size:1.3em;} //from 1.5 up to 2.4 new breakpoint
-	@include breakpoint(break5) {font-size:1.8em;} //from 1.5 up to 2.4 new breakpoint
+	transition: all .8s;
+
 	}
 
 body{ 
-	@include breakpoint(break1) {}
-	@include breakpoint(break2) {}
-	@include breakpoint(break3) {}
-	@include breakpoint(break4) {}	
+
+	@include breakpoint(break1) {font-size:1.1rem;}
+	@include breakpoint(break2) {font-size:1.2rem;}
+	@include breakpoint(break3) {font-size:1.2rem;}
+	@include breakpoint(break4) {font-size:1.3rem;} 
+	@include breakpoint(break5) {font-size:1.8rem;} 
 }
 
 .container {
-	width: 96%;
+	max-width: 96%;
 	margin: 0 auto;
-	@include breakpoint(break1) {max-width: 28.125em;}
-	@include breakpoint(break2) {max-width: 35em;}
-	@include breakpoint(break3) {max-width: 48em;}
-	@include breakpoint(break4) {max-width:56rem;}
-	@include breakpoint(break5) {max-width:72.5rem;}	
+	@include breakpoint(break1) {max-width:96%;}
+	@include breakpoint(break2) {max-width:90%;}
+	@include breakpoint(break3) {max-width:85%;}
+	@include breakpoint(break4) {max-width:85%;}
+	@include breakpoint(break5) {max-width:85%;}	
 }
 
 	
@@ -48,7 +46,6 @@ body{
 	border: 1px solid #ff00d5;
 	margin-top: 1em;
 	background: #fff;
-	transition: all 1s;
 	@include breakpoint(break1) {background: #ffe8e8;}
 	@include breakpoint(break2) {background: #e4c6f8;}
 	@include breakpoint(break3) {background: #c6cef8;}
@@ -60,7 +57,10 @@ body{
 	
 	
 //////////////////////////// grid testing  - not for production
-.outside {
+.container {
+			
+
+	@include breakpoint(break1) {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-gap:1em;
@@ -69,23 +69,26 @@ body{
 		"a"
 		"a"
 		"c"
-		"d";	
-
-	@include breakpoint(break1) {}
+		"d";	}
 
 	@include breakpoint(break2) {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap:1em;
+		grid-gap:.3em;
+		grid-template-areas: 
+		"a a b"
+		"c c c"
+		"d d d";
+		}
+
+	@include breakpoint(break3) {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap:.4em;
 		grid-template-areas: 
 		"a a b"
 		"a a b"
 		"a a b"  
 		"c c c"
 		"d d d";
-		}
-
-	@include breakpoint(break3) {
-		grid-gap:2em;
 
 		}
 	
@@ -104,7 +107,6 @@ body{
 .b{
 	border: 1px solid #ddd;
 	grid-area: b;
-	display: flex;
 	background: rgba(255, 255, 255, 0.3);
 		li { }	
 	}

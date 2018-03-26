@@ -612,37 +612,35 @@ html {
   word-break: normal;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-size: 1em;
+  font-size: 16px;
   background: #bbb;
+  -webkit-transition: all .8s;
+  transition: all .8s; }
+
+body {
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
   /* 896px  / 16px = 56em */
   /* 1224px / 16px = 76.5em */ }
   @media only screen and (min-width: 28.125em) {
-    html {
-      font-size: 1.1em; } }
+    body {
+      font-size: 1.1rem; } }
   @media only screen and (min-width: 35em) {
-    html {
-      font-size: 1.2em; } }
+    body {
+      font-size: 1.2rem; } }
   @media only screen and (min-width: 48em) {
-    html {
-      font-size: 1.2em; } }
+    body {
+      font-size: 1.2rem; } }
   @media only screen and (min-width: 56em) {
-    html {
-      font-size: 1.3em; } }
+    body {
+      font-size: 1.3rem; } }
   @media only screen and (min-width: 76.5em) {
-    html {
-      font-size: 1.8em; } }
-
-body {
-  /* 450px / 16px = 28.125em */
-  /* 560px / 16px = 35em */
-  /* 768px / 16px = 48em */
-  /* 896px  / 16px = 56em */ }
+    body {
+      font-size: 1.8rem; } }
 
 .container {
-  width: 96%;
+  max-width: 96%;
   margin: 0 auto;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
@@ -651,26 +649,24 @@ body {
   /* 1224px / 16px = 76.5em */ }
   @media only screen and (min-width: 28.125em) {
     .container {
-      max-width: 28.125em; } }
+      max-width: 96%; } }
   @media only screen and (min-width: 35em) {
     .container {
-      max-width: 35em; } }
+      max-width: 90%; } }
   @media only screen and (min-width: 48em) {
     .container {
-      max-width: 48em; } }
+      max-width: 85%; } }
   @media only screen and (min-width: 56em) {
     .container {
-      max-width: 56rem; } }
+      max-width: 85%; } }
   @media only screen and (min-width: 76.5em) {
     .container {
-      max-width: 72.5rem; } }
+      max-width: 85%; } }
 
 .gridlines {
   border: 1px solid #ff00d5;
   margin-top: 1em;
   background: #fff;
-  -webkit-transition: all 1s;
-  transition: all 1s;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
@@ -692,57 +688,50 @@ body {
     .gridlines {
       background: #cfff21; } }
 
-.outside {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  grid-gap: 1em;
-      grid-template-areas: "b" "a" "a" "c" "d";
+.container {
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
   /* 896px  / 16px = 56em */
   /* 1224px / 16px = 76.5em */ }
+  @media only screen and (min-width: 28.125em) {
+    .container {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
+      grid-gap: 1em;
+          grid-template-areas: "b" "a" "a" "c" "d"; } }
   @media only screen and (min-width: 35em) {
-    .outside {
+    .container {
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 1em;
-          grid-template-areas: "a a b" "a a b" "a a b"   "c c c" "d d d"; } }
+      grid-gap: .3em;
+          grid-template-areas: "a a b" "c c c" "d d d"; } }
   @media only screen and (min-width: 48em) {
-    .outside {
-      grid-gap: 2em; } }
+    .container {
+      -ms-grid-columns: 1fr 1fr 1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: .4em;
+          grid-template-areas: "a a b" "a a b" "a a b"   "c c c" "d d d"; } }
 
 .a {
   border: 1px solid #ddd;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
   grid-area: a;
   background: rgba(255, 255, 255, 0.3); }
 
 .b {
   border: 1px solid #ddd;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: b;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: rgba(255, 255, 255, 0.3); }
 
 .c {
   border: 1px solid #ddd;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: c;
   background: rgba(255, 255, 255, 0.3); }
 
 .d {
   border: 1px solid #ddd;
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: d;
   background: rgba(255, 255, 255, 0.3); }
 
@@ -878,7 +867,7 @@ nav {
           color: #fcff9b;
           text-decoration: underline; }
 
-.subnav {
+.subnavi {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1110,45 +1099,24 @@ table {
     padding: 0.5em; }
 
 .menusection {
-  margin: 0 auto 3em;
+  margin-bottom: 3em;
   background-image: url(../../assets/img/menutexture.jpg);
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
-  display: block;
   text-align: center;
-  padding-bottom: 2rem; }
-  .menusection .menuitems {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    /* 450px / 16px = 28.125em */
-    /* 560px / 16px = 35em */
-    /* 768px / 16px = 48em */
-    /* 896px  / 16px = 56em */
-    /* 1224px / 16px = 76.5em */ }
-    @media only screen and (min-width: 28.125em) {
-      .menusection .menuitems {
-        -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-        grid-gap: 2em;
-        text-align: left; } }
-    @media only screen and (min-width: 35em) {
-      .menusection .menuitems {
-        -ms-grid-columns: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-        grid-gap: 2em; } }
-    @media only screen and (min-width: 48em) {
-      .menusection .menuitems {
-        -ms-grid-columns: 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 1.4em; } }
-    @media only screen and (min-width: 56em) {
-      .menusection .menuitems {
-        -ms-grid-columns: 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 3em; } }
+  padding-bottom: 2rem;
+  /*
+	.menuitems {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include breakpoint(break1) {grid-template-columns: 1fr 1fr; grid-gap:2em; text-align: left;}
+	@include breakpoint(break2) {grid-template-columns: 1fr 1fr; grid-gap:2em;}
+	@include breakpoint(break3) {grid-template-columns: 1fr 1fr 1fr; grid-gap:1.4em;}
+	@include breakpoint(break4) {grid-template-columns: 1fr 1fr 1fr; grid-gap:3em;}
+	@include breakpoint(break5) {}				
+	}
+*/ }
   .menusection h2 {
     font-family: "Rokkitt", serif;
     text-transform: uppercase;
