@@ -612,7 +612,7 @@ html {
   word-break: normal;
   -webkit-transition: all .5s;
   transition: all .5s;
-  font-size: 100%;
+  font-size: 1em;
   background: #bbb;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
