@@ -613,6 +613,7 @@ html {
   -webkit-transition: all .5s;
   transition: all .5s;
   font-size: 100%;
+  background: #bbb;
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
@@ -708,7 +709,7 @@ body {
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1em;
-          grid-template-areas: "a a b" "a a b" "a a b" "c c c" "d d d"; } }
+          grid-template-areas: "a a a b" "a a a b" "a a a b" "c c c c" "d d d d"; } }
   @media only screen and (min-width: 48em) {
     .outside {
       display: -ms-grid;

@@ -5,6 +5,8 @@ html{
 	transition: all .5s;
 	font-size:100%; 
 	
+	background: #bbb;
+	
 	@include breakpoint(break1) {font-size:1.1em;}
 	@include breakpoint(break2) {font-size:1.2em;}
 	@include breakpoint(break3) {font-size:1.2em;}
@@ -70,11 +72,11 @@ body{
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap:1em;
 		grid-template-areas: 
-		"a a b"
-		"a a b"
-		"a a b"
-		"c c c"
-		"d d d";
+		"a a a b"
+		"a a a b"
+		"a a a b"
+		"c c c c"
+		"d d d d";
 		}
 
 	@include breakpoint(break2) {}
