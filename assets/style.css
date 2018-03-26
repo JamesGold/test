@@ -647,19 +647,22 @@ body {
   /* 450px / 16px = 28.125em */
   /* 560px / 16px = 35em */
   /* 768px / 16px = 48em */
-  /* 896px  / 16px = 56em */ }
+  /* 896px  / 16px = 56em */
+  /* 1224px / 16px = 76.5em */ }
   @media only screen and (min-width: 28.125em) {
     .container {
-      width: 98%; } }
+      max-width: 28.125em; } }
   @media only screen and (min-width: 35em) {
     .container {
-      width: 90%; } }
+      max-width: 35em; } }
   @media only screen and (min-width: 48em) {
     .container {
-      width: 85%; } }
+      max-width: 48em; } }
   @media only screen and (min-width: 56em) {
     .container {
-      width: 90%;
+      max-width: 56rem; } }
+  @media only screen and (min-width: 76.5em) {
+    .container {
       max-width: 72.5rem; } }
 
 .gridlines {
@@ -701,22 +704,15 @@ body {
   /* 768px / 16px = 48em */
   /* 896px  / 16px = 56em */
   /* 1224px / 16px = 76.5em */ }
-  @media only screen and (min-width: 28.125em) {
+  @media only screen and (min-width: 35em) {
     .outside {
-      display: -ms-grid;
-      display: grid;
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1em;
-          grid-template-areas: "a a b" "a a b" "a a b" "c c c" "d d d"; } }
+          grid-template-areas: "a a b" "a a b" "a a b"   "c c c" "d d d"; } }
   @media only screen and (min-width: 48em) {
     .outside {
-      display: -ms-grid;
-      display: grid;
-      -ms-grid-columns: 1fr 1fr 1fr;
-          grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2em;
-          grid-template-areas: "a a b" "a a b" "a a b" "c c b" "d d d" "d d d" "d d d"; } }
+      grid-gap: 2em; } }
 
 .a {
   border: 1px solid #ddd;
