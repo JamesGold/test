@@ -665,7 +665,6 @@ body {
 .gridlines {
   border: 1px solid #ff00d5;
   margin-top: 1em;
-  margin-bottom: 1em;
   background: #fff;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -709,7 +708,7 @@ body {
       -ms-grid-columns: 1fr 1fr 1fr;
           grid-template-columns: 1fr 1fr 1fr;
       grid-gap: 1em;
-          grid-template-areas: "a a a b" "a a a b" "a a a b" "c c c c" "d d d d"; } }
+          grid-template-areas: "a a b" "a a b" "a a b" "c c c" "d d d"; } }
   @media only screen and (min-width: 48em) {
     .outside {
       display: -ms-grid;
