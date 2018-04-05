@@ -427,6 +427,13 @@
 		"oAP": "\/_site\/README.txt",
 		"oF": 0
 		},
+	"\/_site\/styleguide\/grids-2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/styleguide\/grids-2.html",
+		"oF": 0
+		},
 	"\/_site\/styleguide\/grids-test.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -446,6 +453,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/_site\/styleguide\/index.html",
+		"oF": 0
+		},
+	"\/_site\/tester.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/_site\/tester.html",
 		"oF": 0
 		},
 	"\/apple-touch-icon-precomposed.png": {
@@ -947,6 +961,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/README.txt",
+		"oF": 0
+		},
+	"\/styleguide\/grids-2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/styleguide\/grids-2.html",
 		"oF": 0
 		},
 	"\/styleguide\/grids-test.html": {

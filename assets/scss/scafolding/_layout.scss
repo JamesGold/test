@@ -40,101 +40,11 @@ body{
 }
 
 	
-/////gridlines for dev
-.gridlines {
-	border: 1px solid #ff00d5;
-	margin-top: 1em;
-	background: #fff;
-
-	@include breakpoint(break1) {border-color: #ffe8e8;}
-	@include breakpoint(break2) {border-color: #e4c6f8;}
-	@include breakpoint(break3) {border-color: #c6cef8;}
-	@include breakpoint(break4) {border-color: #c3ffd9;}
-	@include breakpoint(break5) {border-color: #cfff21;}
-	
-	}	
 
 	
 	
-//////////////////////////// grid testing  - not for production
-.container {
-		display: grid;
-		grid-template-columns: 1fr;
-		grid-gap:1em;
-		grid-template-areas: 
-		"b"
-		"a"
-		"a"
-		"c"
-		"d"
-		"e";			
-
-	@include breakpoint(break1) {
-
-		}
-
-	@include breakpoint(break2) {
-		grid-template-columns: 1fr 1fr;
-		grid-gap:.3em;
-		grid-template-areas: 
-		"b b"
-		"a a"
-		"c c"
-		"d d"
-		"e e";
-		}
-
-	@include breakpoint(break3) {
-		grid-template-columns: 1fr 1fr 1fr;
-		grid-gap:.4em;
-		grid-template-areas: 
-		"a a b"
-		"a a b"
-		"a a b"  
-		"c c c"
-		"d d d"
-		"e e e";
-		}
 	
-	@include breakpoint(break4) {}
-	@include breakpoint(break5) {}			
-	
-}
-
-
-.a{
-	border: 1px solid #ddd;
-	grid-area: a;
-	background: rgba(255, 255, 255, 0.3);
-	}
-
-.b{
-	border: 1px solid #ddd;
-	grid-area: b;
-	background: rgba(255, 255, 255, 0.3);
-		li { }	
-	}
-
-.c{
-	border: 1px solid #ddd;
-	grid-area: c;
-	background: rgba(255, 255, 255, 0.3);
-	}
-	
-.d{
-	border: 1px solid #ddd;
-	grid-area: d; 
-	background: rgba(255, 255, 255, 0.3);
-	}
-	
-	
-.e{
-	border: 1px solid #ddd;
-	grid-area: d; 
-	background: rgba(255, 255, 255, 0.3);
-	}		
-	
-// testing breakpoint sizes
+// testing breakpoint sizes for dev
 
 
 	.sizes:before {content: "Breakpoint: 0";
